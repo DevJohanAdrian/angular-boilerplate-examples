@@ -10,10 +10,17 @@ export const routes: Routes = [
       ),
   },
   {
-    path : 'userList',
+    path: 'userList',
     loadComponent: () =>
       import('./examples/rxjs/userListComponent/userList.component').then(
         (m) => m.UserList,
       ),
-  }
+  },
+  {
+    path: 'ofFrom',
+    loadComponent: () =>
+      import('./examples/rxjs/operators/of_from/of_from.component').then(
+        (m) => m.OfFromComponent,
+      ),
+  },
 ];

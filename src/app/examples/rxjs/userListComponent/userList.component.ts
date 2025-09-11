@@ -34,3 +34,15 @@ export class UserList {
       });
   }
 }
+
+//  this.cdr.markForCheck(); (ChangeDetectorRef) // 👈 Notifica a Angular que hay cambios si estamos usando changeDetection ya que 
+// Forzar la detección de cambios después de asignar los datos:
+//Cuando Angular usa OnPush, la vista solo se actualiza en estas condiciones:
+
+// Si cambia una @Input().
+
+// Si se dispara un evento del DOM (click, keyup, etc.).
+
+// Si el cambio ocurre dentro de un Observable/Promise usado con AsyncPipe.
+
+// 👉 En tu caso, como estás asignando this.users = data; dentro de una suscripción manual, OnPush no detecta el cambio automáticamente.
