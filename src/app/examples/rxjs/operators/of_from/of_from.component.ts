@@ -14,6 +14,8 @@ export class OfFromComponent {
   fromValues: string = '';
 
   constructor() {
-    of(1, 2, 3).subscribe((value) =>  (this.ofValues += value + ' ') );
+    of(1, 2, 3).subscribe((value) => (this.ofValues += value + ' '));
+
+    from([4, 5, 6]).subscribe((value) => (this.fromValues += value + ' '));
   }
 }
