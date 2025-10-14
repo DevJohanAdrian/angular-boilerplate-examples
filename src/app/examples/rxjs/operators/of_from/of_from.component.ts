@@ -10,15 +10,14 @@ import { of, from } from 'rxjs';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class OfFromComponent {
-  ofValues: string = '';
-  fromValues: string = '';
+  users: string[] = [];
+
 
   constructor() {
-    of(1, 2, 3).subscribe((value) => (this.ofValues += value + ' '));
-
-    from([4, 5, 6]).subscribe((value) => (this.fromValues += value + ' '));
-    from([4, 5, 6]).subscribe((value) => (this.fromValues += value + ' '));
-    from([4, 5, 6]).subscribe((value) => (this.fromValues += value + ' '));
+    // examples of y from
+   this.user$.subscribe(value => {
+     console.log('of value:', value);
+    }
  
   }
 }
