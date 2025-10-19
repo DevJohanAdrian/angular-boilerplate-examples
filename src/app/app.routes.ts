@@ -40,10 +40,10 @@ export const routes: Routes = [
   {
     path: 'deferAjax',
     loadComponent: () =>
-      import(
-        './examples/rxjs/operators/defer_ajax/defer_ajax.component'
-      ).then((m) => m.DeferAjaxComponent),
-  }, 
+      import('./examples/rxjs/operators/defer_ajax/defer_ajax.component').then(
+        (m) => m.DeferAjaxComponent,
+      ),
+  },
   {
     path: 'emptyNeverThrowError',
     loadComponent: () =>
@@ -51,17 +51,31 @@ export const routes: Routes = [
         './examples/rxjs/operators/empty_never_throwError/empty_never_throwError.component'
       ).then((m) => m.EmptyNeverThrowErrorComponent),
   },
-   {
+  {
     path: 'bindCallback',
     loadComponent: () =>
       import(
         './examples/rxjs/operators/bindCallback/bindCallback.component'
       ).then((m) => m.BindCallbackComponent),
-   },
-   {
-    path: 'bindNodeCallback', loadComponent: () =>
+  },
+  //  {
+  //   path: 'bindNodeCallback', loadComponent: () =>
+  //     import(
+  //       './examples/rxjs/operators/bindNodeCallback/bindNodeCallback.component'
+  //     ).then((m) => m.BindNodeCallbackComponent),
+  //  },
+  {
+    path: 'fromtEvent',
+    loadComponent: () =>
+      import('./examples/rxjs/operators/fromEvent/fromEvent.component').then(
+        (m) => m.FromEventComponent,
+      ),
+  },
+  {
+    path: 'fromEventPattern',
+    loadComponent: () =>
       import(
-        './examples/rxjs/operators/bindNodeCallback/bindNodeCallback.component'
-      ).then((m) => m.BindNodeCallbackComponent),
-   }
+        './examples/rxjs/operators/fromEventPattern/fromEventPattern.component'
+      ).then((m) => m.FromEventPatternComponent),
+  },
 ];
