@@ -36,5 +36,12 @@ export const routes: Routes = [
       import('./examples/rxjs/operators/range/range.component').then(
         (m) => m.RangeComponent,
       ),
+  },
+  {
+    path: 'deferAjax',
+    loadComponent: () =>
+      import(
+        './examples/rxjs/operators/defer_ajax/defer_ajax.component'
+      ).then((m) => m.DeferAjaxComponent),
   }
 ];
