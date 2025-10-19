@@ -43,5 +43,12 @@ export const routes: Routes = [
       import(
         './examples/rxjs/operators/defer_ajax/defer_ajax.component'
       ).then((m) => m.DeferAjaxComponent),
+  }, 
+  {
+    path: 'emptyNeverThrowError',
+    loadComponent: () =>
+      import(
+        './examples/rxjs/operators/empty_never_throwError/empty_never_throwError.component'
+      ).then((m) => m.EmptyNeverThrowErrorComponent),
   }
 ];
