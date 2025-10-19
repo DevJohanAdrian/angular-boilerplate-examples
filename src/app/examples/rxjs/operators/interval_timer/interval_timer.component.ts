@@ -13,6 +13,7 @@ import { switchMap, take } from 'rxjs/operators';
 })
 
 // Crear un contador en pantalla que se actualice cada segundo y comience después de 3 segundos.
+// take 10 valores del contador lo que hara que solo sea un contador hasta 10.
 export class IntervalTimerComponent {
   contador = signal(0);
 

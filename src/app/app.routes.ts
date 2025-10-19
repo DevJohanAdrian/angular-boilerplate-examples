@@ -78,4 +78,11 @@ export const routes: Routes = [
         './examples/rxjs/operators/fromEventPattern/fromEventPattern.component'
       ).then((m) => m.FromEventPatternComponent),
   },
+  {
+    path: 'generate',
+    loadComponent: () =>
+      import(
+        './examples/rxjs/operators/generate/generate.component'
+      ).then((m) => m.GenerateComponent),
+  }
 ];
