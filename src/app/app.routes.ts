@@ -50,5 +50,12 @@ export const routes: Routes = [
       import(
         './examples/rxjs/operators/empty_never_throwError/empty_never_throwError.component'
       ).then((m) => m.EmptyNeverThrowErrorComponent),
-  }
+  },
+   {
+    path: 'bindCallback',
+    loadComponent: () =>
+      import(
+        './examples/rxjs/operators/bindCallback/bindCallback.component'
+      ).then((m) => m.BindCallbackComponent),
+   }
 ];
