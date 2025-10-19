@@ -1,6 +1,5 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 import { bindCallback } from 'rxjs';
-import { signal } from '@angular/core';
 
 // Simula una operación asíncrona que utiliza un callback.
 

@@ -57,5 +57,11 @@ export const routes: Routes = [
       import(
         './examples/rxjs/operators/bindCallback/bindCallback.component'
       ).then((m) => m.BindCallbackComponent),
+   },
+   {
+    path: 'bindNodeCallback', loadComponent: () =>
+      import(
+        './examples/rxjs/operators/bindNodeCallback/bindNodeCallback.component'
+      ).then((m) => m.BindNodeCallbackComponent),
    }
 ];
