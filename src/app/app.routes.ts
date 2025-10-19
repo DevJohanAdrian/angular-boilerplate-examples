@@ -23,4 +23,18 @@ export const routes: Routes = [
         (m) => m.OfFromComponent,
       ),
   },
+  {
+    path: 'intervalTimer',
+    loadComponent: () =>
+      import(
+        './examples/rxjs/operators/interval_timer/interval_timer.component'
+      ).then((m) => m.IntervalTimerComponent),
+  },
+  {
+    path: 'range',
+    loadComponent: () =>
+      import('./examples/rxjs/operators/range/range.component').then(
+        (m) => m.RangeComponent,
+      ),
+  }
 ];
