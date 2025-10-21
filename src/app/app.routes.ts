@@ -99,5 +99,11 @@ export const routes: Routes = [
         './examples/rxjs/operators/combination/combineLastest/combineLastest.component'
       ).then((m) => m.CombineLatestDemoComponent),
 
+  },
+  {
+    path: 'combineLatestAll', loadComponent: () =>
+      import(
+        './examples/rxjs/operators/combination/combineLatestAll/combineLatestAll.component'
+      ).then((m) => m.CombineLatestAllComponent),
   }
 ];
