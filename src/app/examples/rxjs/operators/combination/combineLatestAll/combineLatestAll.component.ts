@@ -14,7 +14,7 @@ export class CombineLatestAllComponent {
 
   constructor() {
     const sensores$ = interval(2000).pipe(
-      take(2),
+      take(2), // toma los dos primeros valores: 0 y 1
       map(i => interval(1000).pipe(map(v => `S${i}: ${v}`)))
     );
 

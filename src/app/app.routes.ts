@@ -105,5 +105,12 @@ export const routes: Routes = [
       import(
         './examples/rxjs/operators/combination/combineLatestAll/combineLatestAll.component'
       ).then((m) => m.CombineLatestAllComponent),
+  },
+  {
+    path: 'concat',
+    loadComponent: () =>
+      import(
+        './examples/rxjs/operators/combination/concat/concat.component'
+      ).then((m) => m.ConcatComponent),
   }
 ];
