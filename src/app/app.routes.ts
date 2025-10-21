@@ -19,7 +19,7 @@ export const routes: Routes = [
   {
     path: 'ofFrom',
     loadComponent: () =>
-      import('./examples/rxjs/operators/of_from/of_from.component').then(
+      import('./examples/rxjs/operators/creation/of_from/of_from.component').then(
         (m) => m.OfFromComponent,
       ),
   },
@@ -27,20 +27,20 @@ export const routes: Routes = [
     path: 'intervalTimer',
     loadComponent: () =>
       import(
-        './examples/rxjs/operators/interval_timer/interval_timer.component'
+        './examples/rxjs/operators/creation/interval_timer/interval_timer.component'
       ).then((m) => m.IntervalTimerComponent),
   },
   {
     path: 'range',
     loadComponent: () =>
-      import('./examples/rxjs/operators/range/range.component').then(
+      import('./examples/rxjs/operators/creation/range/range.component').then(
         (m) => m.RangeComponent,
       ),
   },
   {
     path: 'deferAjax',
     loadComponent: () =>
-      import('./examples/rxjs/operators/defer_ajax/defer_ajax.component').then(
+      import('./examples/rxjs/operators/creation/defer_ajax/defer_ajax.component').then(
         (m) => m.DeferAjaxComponent,
       ),
   },
@@ -48,14 +48,14 @@ export const routes: Routes = [
     path: 'emptyNeverThrowError',
     loadComponent: () =>
       import(
-        './examples/rxjs/operators/empty_never_throwError/empty_never_throwError.component'
+        './examples/rxjs/operators/creation/empty_never_throwError/empty_never_throwError.component'
       ).then((m) => m.EmptyNeverThrowErrorComponent),
   },
   {
     path: 'bindCallback',
     loadComponent: () =>
       import(
-        './examples/rxjs/operators/bindCallback/bindCallback.component'
+        './examples/rxjs/operators/creation/bindCallback/bindCallback.component'
       ).then((m) => m.BindCallbackComponent),
   },
   //  {
@@ -67,7 +67,7 @@ export const routes: Routes = [
   {
     path: 'fromtEvent',
     loadComponent: () =>
-      import('./examples/rxjs/operators/fromEvent/fromEvent.component').then(
+      import('./examples/rxjs/operators/creation/fromEvent/fromEvent.component').then(
         (m) => m.FromEventComponent,
       ),
   },
@@ -75,14 +75,29 @@ export const routes: Routes = [
     path: 'fromEventPattern',
     loadComponent: () =>
       import(
-        './examples/rxjs/operators/fromEventPattern/fromEventPattern.component'
+        './examples/rxjs/operators/creation/fromEventPattern/fromEventPattern.component'
       ).then((m) => m.FromEventPatternComponent),
   },
   {
     path: 'generate',
     loadComponent: () =>
       import(
-        './examples/rxjs/operators/generate/generate.component'
+        './examples/rxjs/operators/creation/generate/generate.component'
       ).then((m) => m.GenerateComponent),
+  },
+  {
+    path: 'lif',
+    loadComponent: () =>
+      import('./examples/rxjs/operators/creation/lif/lif.component').then(
+        (m) => m.LifComponent,
+      ),
+  },
+  {
+    path: 'combineLatest',
+    loadComponent: () =>
+      import(
+        './examples/rxjs/operators/combination/combineLastest/combineLastest.component'
+      ).then((m) => m.CombineLatestDemoComponent),
+
   }
 ];

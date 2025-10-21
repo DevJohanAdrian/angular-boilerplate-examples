@@ -15,6 +15,7 @@ interface GenerateOptions {
     <p>{{ sequence() }}</p>`,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
+// Crea un observable basado en un bucle controlado: define el estado inicial, condición y paso.
 export class GenerateComponent {
    sequence = signal<string>('');
 
