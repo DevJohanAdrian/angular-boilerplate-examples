@@ -19,9 +19,9 @@ export const routes: Routes = [
   {
     path: 'ofFrom',
     loadComponent: () =>
-      import('./examples/rxjs/operators/creation/of_from/of_from.component').then(
-        (m) => m.OfFromComponent,
-      ),
+      import(
+        './examples/rxjs/operators/creation/of_from/of_from.component'
+      ).then((m) => m.OfFromComponent),
   },
   {
     path: 'intervalTimer',
@@ -40,9 +40,9 @@ export const routes: Routes = [
   {
     path: 'deferAjax',
     loadComponent: () =>
-      import('./examples/rxjs/operators/creation/defer_ajax/defer_ajax.component').then(
-        (m) => m.DeferAjaxComponent,
-      ),
+      import(
+        './examples/rxjs/operators/creation/defer_ajax/defer_ajax.component'
+      ).then((m) => m.DeferAjaxComponent),
   },
   {
     path: 'emptyNeverThrowError',
@@ -67,9 +67,9 @@ export const routes: Routes = [
   {
     path: 'fromtEvent',
     loadComponent: () =>
-      import('./examples/rxjs/operators/creation/fromEvent/fromEvent.component').then(
-        (m) => m.FromEventComponent,
-      ),
+      import(
+        './examples/rxjs/operators/creation/fromEvent/fromEvent.component'
+      ).then((m) => m.FromEventComponent),
   },
   {
     path: 'fromEventPattern',
@@ -98,10 +98,10 @@ export const routes: Routes = [
       import(
         './examples/rxjs/operators/combination/combineLastest/combineLastest.component'
       ).then((m) => m.CombineLatestDemoComponent),
-
   },
   {
-    path: 'combineLatestAll', loadComponent: () =>
+    path: 'combineLatestAll',
+    loadComponent: () =>
       import(
         './examples/rxjs/operators/combination/combineLatestAll/combineLatestAll.component'
       ).then((m) => m.CombineLatestAllComponent),
@@ -118,11 +118,27 @@ export const routes: Routes = [
     loadComponent: () =>
       import(
         './examples/rxjs/operators/combination/concatAll/concatAll.component'
-      ).then((m) => m.ConcatAllComponent),  
+      ).then((m) => m.ConcatAllComponent),
   },
-  {path: 'merge', loadComponent: () =>
+  {
+    path: 'merge',
+    loadComponent: () =>
       import(
         './examples/rxjs/operators/combination/merge/merge.component'
-      ).then((m) => m.MergeComponent),  
+      ).then((m) => m.MergeComponent),
   },
+  {
+    path: 'mergeAll',
+    loadComponent: () =>
+      import(
+        './examples/rxjs/operators/combination/mergeAll/mergeAll.component'
+      ).then((m) => m.MergeAllComponent),
+  },
+  {
+    path:'forkJoin',
+    loadComponent: () =>
+      import(
+        './examples/rxjs/operators/combination/forkJoin/forkJoin.component'
+      ).then((m) => m.ForkJoinComponent),
+  }
 ];
