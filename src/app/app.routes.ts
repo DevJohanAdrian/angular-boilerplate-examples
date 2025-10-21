@@ -140,5 +140,16 @@ export const routes: Routes = [
       import(
         './examples/rxjs/operators/combination/forkJoin/forkJoin.component'
       ).then((m) => m.ForkJoinComponent),
+  },
+  {path:'zip', loadComponent: () =>
+    import(
+      './examples/rxjs/operators/combination/zip/zip.component'
+    ).then((m) => m.ZipComponent),
+  },
+  {
+    path:'race', loadComponent: () =>
+      import(
+        './examples/rxjs/operators/combination/race/race.component'
+      ).then((m) => m.RaceComponent),
   }
 ];
